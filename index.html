@@ -69,8 +69,89 @@
 #waButton:hover {
   background-color: #1EBE5D;
 }
+			
         </style>
-		
+		<style>
+#contactBox {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.95);
+  padding: 12px 15px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1000;
+  width: 230px;
+  text-align: center;
+}
+
+#logoDLH {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 6px;
+}
+
+#contactBox h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #2a6ebb;
+}
+
+#contactBox p {
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+#waButton {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 12px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+#waButton:hover {
+  background-color: #1EBE5D;
+}
+
+/* RESPONSIVE DESIGN UNTUK SMARTPHONE */
+@media (max-width: 768px) {
+  #contactBox {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #logoDLH {
+    width: 40px;
+    height: 40px;
+  }
+
+  #contactBox h4 {
+    font-size: 13px;
+  }
+
+  #waButton {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}
+</style>
+
         <title>DATA SPASIAL DLH LOMBOK TENGAH</title>
     </head>
     <body>
