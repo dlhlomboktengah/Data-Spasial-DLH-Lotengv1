@@ -411,16 +411,7 @@ function toggleContact() {
                 popup._contentNode.classList.remove('media');
             }
         }
-        var title = new L.Control({'position':'topright'});
-        title.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info');
-            this.update();
-            return this._div;
-        };
-        title.update = function () {
-            this._div.innerHTML = '<h2>DATA SPASIAL DLH LOMBOK TENGAH</h2>';
-        };
-        title.addTo(map);
+       
         var abstract = new L.Control({'position':'topright'});
         abstract.onAdd = function (map) {
             this._div = L.DomUtil.create('div',
