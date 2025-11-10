@@ -151,6 +151,109 @@
   }
 }
 </style>
+		<style>
+/* Tombol Info */
+#infoButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #2a6ebb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1100;
+  transition: 0.3s;
+}
+#infoButton:hover {
+  background: #245aa5;
+}
+
+/* Kotak Contact Person */
+#contactBox {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(255,255,255,0.95);
+  padding: 12px 15px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1000;
+  width: 230px;
+  text-align: center;
+  display: none; /* disembunyikan awalnya */
+}
+
+#logoDLH {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 6px;
+}
+
+#contactBox h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #2a6ebb;
+}
+
+#contactBox p {
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+#waButton {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 12px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+#waButton:hover {
+  background-color: #1EBE5D;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  #infoButton {
+    bottom: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+  #contactBox {
+    bottom: 70px;
+    right: 10px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+  }
+  #logoDLH {
+    width: 40px;
+    height: 40px;
+  }
+  #waButton {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px;
+  }
+}
+</style>
+
 
         <title>DATA SPASIAL DLH LOMBOK TENGAH</title>
     </head>
@@ -177,7 +280,10 @@
         <script src="data/INDEKSKUALITASUDARA_4.js"></script>
         <script src="data/INDEKSKUALITASAIR_5.js"></script>
         <script src="data/TAMANKEHATI_6.js"></script>
-		<!-- Contact Person Box -->
+<!-- Tombol Info -->
+<button id="infoButton" onclick="toggleContact()">ℹ️ Info</button>
+
+<!-- Kotak Contact Person -->
 <div id="contactBox">
   <img src="images/logo_dlh.png" alt="Logo DLH" id="logoDLH">
   <h4>Dinas Lingkungan Hidup</h4>
@@ -186,6 +292,13 @@
      ✉️ dlh@lomboktengahkab.go.id</p>
   <a href="https://wa.me/6281234567890" target="_blank" id="waButton">💬 Hubungi Kami</a>
 </div>
+<script>
+function toggleContact() {
+  const box = document.getElementById('contactBox');
+  box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
 
         <script>
         var map = L.map('map', {
